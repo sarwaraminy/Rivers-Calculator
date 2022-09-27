@@ -1,0 +1,7 @@
+#ignore the following files to pusing to github
+Rivers Calculation/
+RiversCalculator/ConnectionString.cs
+RiversCalculator/bin/
+RiversCalculator/Rivers_Calculator.mdb
+RiversCalculator/Rivers_Calculator.xlsx
+
