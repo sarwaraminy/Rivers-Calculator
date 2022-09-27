@@ -16,3 +16,6 @@ C:\Users\samini\Documents\Visual Studio 2010\Projects\RiversCalculator_Eng\River
 C:\Users\samini\Documents\Visual Studio 2010\Projects\RiversCalculator_Eng\RiversCalculator\obj\x86\Debug\RiversCalculator.RiversInfo.resources
 C:\Users\samini\Documents\Visual Studio 2010\Projects\RiversCalculator_Eng\RiversCalculator\obj\x86\Debug\RiversCalculator.UserInfo.resources
 C:\Users\samini\Documents\Visual Studio 2010\Projects\RiversCalculator_Eng\RiversCalculator\obj\x86\Debug\RiversCalculator.csproj.GenerateResource.Cache
+C:\Users\samini\Documents\Visual Studio 2010\Projects\RiversCalculator_Eng\RiversCalculator\bin\Debug\itextsharp.dll
+C:\Users\samini\Documents\Visual Studio 2010\Projects\RiversCalculator_Eng\RiversCalculator\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\samini\Documents\Visual Studio 2010\Projects\RiversCalculator_Eng\RiversCalculator\bin\Debug\itextsharp.xml
