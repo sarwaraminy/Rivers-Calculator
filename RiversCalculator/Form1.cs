@@ -1377,6 +1377,7 @@ namespace RiversCalculator
                     {
                         try
                         {
+                            //yearly datagrid
                             PdfPTable pdfTable = new PdfPTable(dataGridRiver.Columns.Count);
                             pdfTable.DefaultCell.Padding = 3;
                             pdfTable.WidthPercentage = 100;
@@ -1396,15 +1397,72 @@ namespace RiversCalculator
                                 }
                             }
 
+                            //decreation datagrid
+                            PdfPTable pdfTable1 = new PdfPTable(dataGridDecreation.Columns.Count);
+                            pdfTable1.DefaultCell.Padding = 3;
+                            pdfTable1.WidthPercentage = 100;
+                            pdfTable1.HorizontalAlignment = Element.ALIGN_LEFT;
+
+                            foreach (DataGridViewColumn column1 in dataGridDecreation.Columns)
+                            {
+                                PdfPCell cell1 = new PdfPCell(new Phrase(column1.HeaderText));
+                                pdfTable1.AddCell(cell1);
+                            }
+
+                            foreach (DataGridViewRow row1 in dataGridDecreation.Rows)
+                            {
+                                foreach (DataGridViewCell cell1 in row1.Cells)
+                                {
+                                    pdfTable1.AddCell(cell1.Value.ToString());
+                                }
+                            }
+
                             using (FileStream stream = new FileStream(sfd.FileName, FileMode.Create))
                             {
                                 Document pdfDoc = new Document(PageSize.A4, 10f, 20f, 20f, 10f);
                                 PdfWriter.GetInstance(pdfDoc, stream);
                                 pdfDoc.Open();
+                                //graph report--------------------------------------------------------------------------
+                                //Call first Graph to be created
+                                PercentageChart("R");
+                                MemoryStream memoryStream = new MemoryStream();
+                                pctChart.SaveImage(memoryStream, ChartImageFormat.Png);
+                                iTextSharp.text.Image img = iTextSharp.text.Image.GetInstance(memoryStream.GetBuffer());
+                                img.ScalePercent(90f);
+                                img.Alignment = Right;
+                                pdfDoc.Add(img);
+                                //--------------------------------------------------------------------------------------
                                 pdfDoc.AddHeader("content-disposition", "attachment;filename=" + sfd.FileName);
+                                //add new boxed value
+                                pdfDoc.Add(new iTextSharp.text.Paragraph("Country Name: " + cmbRptCountry.Text));
+                                pdfDoc.Add(new iTextSharp.text.Paragraph("Provence Name: " + cmbRptProvence.Text));
+                                pdfDoc.Add(new iTextSharp.text.Paragraph("District Name: " + cmbRptDistric.Text));
+                                pdfDoc.Add(new iTextSharp.text.Paragraph("River Name: " + cmbRiverSel.Text));
+                                pdfDoc.Add(new iTextSharp.text.Paragraph("Station Name: " + txtStNameDisp.Text));
+                                pdfDoc.Add(new iTextSharp.text.Paragraph("Station ID: " + txtStNumDisp.Text));
+                                pdfDoc.Add(new iTextSharp.text.Paragraph("Capacity: " + txtCADisp.Text));
+                                pdfDoc.Add(new iTextSharp.text.Paragraph("\n"));
                                 pdfDoc.Add(pdfTable);
+                                pdfDoc.Add(new iTextSharp.text.Paragraph("\n"));
+                                pdfDoc.Add(new iTextSharp.text.Paragraph("The Mean :   " + txtMean.Text));
+                                pdfDoc.Add(new iTextSharp.text.Paragraph("The Stdiv :   " + txtStd.Text));
+                                pdfDoc.Add(new iTextSharp.text.Paragraph("# records :   " + txtN.Text));
+                                pdfDoc.NewPage();
+                                //call the graph2 to be created and then import it to the pdf
+                                PercentageChart("P");
+                                //graph report 2--------------------------------------------------------------------------
+                                MemoryStream memoryStream1 = new MemoryStream();
+                                pctChart.SaveImage(memoryStream1, ChartImageFormat.Png);
+                                iTextSharp.text.Image img1 = iTextSharp.text.Image.GetInstance(memoryStream1.GetBuffer());
+                                img1.ScalePercent(90f);
+                                img1.Alignment = Right;
+                                pdfDoc.Add(img1);
+                                //--------------------------------------------------------------------------------------
+                                pdfDoc.Add(pdfTable1);
                                 pdfDoc.Close();
                                 stream.Close();
+                                //Call back the return graph
+                                PercentageChart("R");
                             }
 
                             MessageBox.Show("Data Exported Successfully !!!", "Info");
