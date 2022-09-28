@@ -701,6 +701,9 @@ namespace RiversCalculator
         {
             try
             {
+                //clear the tyears table first
+                string delTyear = "DELETE FROM TYEARS ";
+                ConString.excuteMyQuery(delTyear);
                 //Calculate the year
                 //--------------------Time Period 1
                 double tp1Val;
@@ -828,6 +831,19 @@ namespace RiversCalculator
                     double tp8XtC = double.Parse(txtMean.Text) + tp8YnC * double.Parse(txtStd.Text);
                     txtXtTP8.Text = Math.Truncate(tp8XtC).ToString();
                 }
+                //now insert the calculated data into tyears table
+                string tQ1 = "INSERT INTO TYEARS VALUES ('"+lblTyears.Text+"',"+txtTP1.Text+","+txtTP2.Text+","+txtTP3.Text+","+txtTP4.Text+
+                    ","+txtTP5.Text+","+txtTP6.Text+","+txtTP7.Text+","+txtTP8.Text+")";
+                ConString.excuteMyQuery(tQ1);
+                string tQ2 = "INSERT INTO TYEARS VALUES ('"+lblYt.Text+"',"+txtYtTP1.Text+","+txtYtTP2.Text+","+txtYtTP3.Text+","+txtYtTP4.Text+
+                    ","+txtYtTP5.Text+","+txtYtTP6.Text+","+txtYtTP7.Text+","+txtYtTP8.Text+")";
+                ConString.excuteMyQuery(tQ2);
+                string tQ3 = "INSERT INTO TYEARS VALUES ('"+lblK.Text+"',"+txtKTP1.Text+","+txtKTP2.Text+","+txtKTP3.Text+","+txtKTP4.Text+","+
+                    txtKTP5.Text+","+txtKTP6.Text+","+txtKTP7.Text+","+txtKTP8.Text+")";
+                ConString.excuteMyQuery(tQ3);
+                string tQ4 = "INSERT INTO TYEARS VALUES ('"+lblXt.Text+"',"+txtXtTP1.Text+","+txtXtTP2.Text+","+txtXtTP3.Text+","+
+                    txtXtTP4.Text+","+txtXtTP5.Text+","+txtXtTP6.Text+","+txtXtTP7.Text+","+txtXtTP8.Text+")";
+                ConString.excuteMyQuery(tQ4);
             }
             catch { }
         }

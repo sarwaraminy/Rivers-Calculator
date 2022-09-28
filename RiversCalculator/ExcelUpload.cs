@@ -15,15 +15,11 @@ namespace RiversCalculator
 {
     public partial class ExcelUpload : Form
     {
+        ConnectionString sa_conCls = new ConnectionString();
         //Create some variables
         OleDbConnection con;
-        OleDbDataAdapter oda;
-        DataTable dt;
-        DataSet ds;
         OleDbCommand cmd;
-        OleDbDataReader dr;
         string loginuser;
-        SqlBulkCopy bcopy;
 
         //create the connectionClass
         ConnectionString ConString = new ConnectionString();
@@ -87,7 +83,7 @@ namespace RiversCalculator
                     //First clear our tem table - TMP_COUNTRYTBL
                     //delete privios data
                     string clearCntry = "DELETE FROM TMP_COUNTRYTBL";
-                    excuteMyQuery(clearCntry);
+                    sa_conCls.excuteMyQuery(clearCntry);
                     //Load data from excel to tmp_country table
                     xlsxLoadTMP_CountryTBL();
                     //now load data from TMP_COUNTRYTBL to countrytbl
@@ -98,7 +94,7 @@ namespace RiversCalculator
                     //First clear our tem table - TMP_RIVERS
                     //delete privios data
                     string clearRiversD = "DELETE FROM TMP_RIVERS";
-                    excuteMyQuery(clearRiversD);
+                    sa_conCls.excuteMyQuery(clearRiversD);
                     //Load data from excel to tmp_rivers table
                     xlsxLoadTMP_Rivers();
                     //now load data from TMP_RIVERS to RIVERS
@@ -109,7 +105,7 @@ namespace RiversCalculator
                     //First clear our tem table - TMP_RIVERSINFO
                     //delete privios data
                     string clearRiversI = "DELETE FROM TMP_RIVERSINFO";
-                    excuteMyQuery(clearRiversI);
+                    sa_conCls.excuteMyQuery(clearRiversI);
                     //Load data from excel to tmp_rivers table
                     xlsxLoadTMP_Riversinfo();
                     //now load data from TMP_RIVERS to RIVERS
@@ -129,7 +125,7 @@ namespace RiversCalculator
         }
 
         //This methode excute the sql commond
-        private void excuteMyQuery(string myQuery)
+        /*private void excuteMyQuery(string myQuery)
         {
             try
             {
@@ -140,7 +136,7 @@ namespace RiversCalculator
                 con.Close();
             }
             catch (Exception exobj) { MessageBox.Show(exobj.Message); }
-        }
+        }*/
 
         //Load data from excel.Country sheet to tmp_countrytbl
         private void xlsxLoadTMP_CountryTBL()
@@ -201,7 +197,7 @@ namespace RiversCalculator
                 string CntryQ = "INSERT INTO COUNTRYTBL (COUNTRY, USER_ID, ISO, CNAME) SELECT t1.COUNTRY, t1.USER_ID, t1.ISO, t1.CNAME FROM "+
                     "TMP_COUNTRYTBL t1 WHERE NOT EXISTS (SELECT COUNTRY, USER_ID FROM COUNTRYTBL t2 WHERE t2.COUNTRY=t1.COUNTRY AND t2.USER_ID=t1.USER_ID)";
                 //Now excute the query
-                excuteMyQuery(CntryQ); 
+                sa_conCls.excuteMyQuery(CntryQ); 
             }
             catch (Exception exobj)
             {
@@ -285,7 +281,7 @@ namespace RiversCalculator
                     " SELECT t1.RIVER_ID, t1.YEAR, t1.USER_ID, t1.RIVER_NAME, t1.STATION_NAME, t1.STATION_ID, t1.CA, t1.M3_PER_SECOND,t1.YEAR_DATE FROM " +
                     "TMP_RIVERS t1 WHERE NOT EXISTS (SELECT RIVER_ID, YEAR, USER_ID FROM RIVERS t2 WHERE t2.RIVER_ID=t1.RIVER_ID AND t2.YEAR=t1.YEAR AND t2.USER_ID=t1.USER_ID)";
                 //Now excute the query
-                excuteMyQuery(CntryQ);
+                sa_conCls.excuteMyQuery(CntryQ);
             }
             catch (Exception exobj)
             {
@@ -374,7 +370,7 @@ namespace RiversCalculator
                     " TMP_RIVERSINFO t1 WHERE NOT EXISTS (SELECT COUNTRY, PCODE, DCODE, RIVER_ID FROM RIVERSINFO t2 WHERE t2.COUNTRY=t1.COUNTRY " +
                     " AND t2.PCODE=t1.PCODE AND t2.DCODE=t1.DCODE AND t2.RIVER_ID=t1.RIVER_ID )";
                 //Now excute the query
-                excuteMyQuery(CntryQ);
+                sa_conCls.excuteMyQuery(CntryQ);
             }
             catch (Exception exobj)
             {
