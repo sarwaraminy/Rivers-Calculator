@@ -84,6 +84,7 @@
             this.lblRiver = new System.Windows.Forms.Label();
             this.cmbRiverSel = new System.Windows.Forms.ComboBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.dataGridRptOptsT = new System.Windows.Forms.DataGridView();
             this.cmbRptProvence = new System.Windows.Forms.ComboBox();
             this.cmbRptDistric = new System.Windows.Forms.ComboBox();
             this.cmbRptCountry = new System.Windows.Forms.ComboBox();
@@ -154,17 +155,22 @@
             this.pctChart = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.lblBRight = new System.Windows.Forms.LinkLabel();
             this.saveExcelFileDialog = new System.Windows.Forms.SaveFileDialog();
+            this.dataGridRptOptsB = new System.Windows.Forms.DataGridView();
+            this.dataGridRptOptsTR = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridRiver)).BeginInit();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridRptOptsT)).BeginInit();
             this.panel3.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridDecreation)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctChart)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridRptOptsB)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridRptOptsTR)).BeginInit();
             this.SuspendLayout();
             // 
             // toDate
@@ -745,12 +751,27 @@
             this.panel2.Controls.Add(this.txtStNameDisp);
             this.panel2.Controls.Add(this.label8);
             this.panel2.Controls.Add(this.label25);
-            this.panel2.Controls.Add(this.label23);
             this.panel2.Controls.Add(this.label20);
+            this.panel2.Controls.Add(this.label23);
+            this.panel2.Controls.Add(this.dataGridRptOptsT);
             this.panel2.Location = new System.Drawing.Point(6, 87);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(177, 150);
             this.panel2.TabIndex = 66;
+            // 
+            // dataGridRptOptsT
+            // 
+            this.dataGridRptOptsT.AllowUserToAddRows = false;
+            this.dataGridRptOptsT.AllowUserToDeleteRows = false;
+            this.dataGridRptOptsT.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridRptOptsT.ColumnHeadersVisible = false;
+            this.dataGridRptOptsT.Location = new System.Drawing.Point(-1, 3);
+            this.dataGridRptOptsT.Name = "dataGridRptOptsT";
+            this.dataGridRptOptsT.ReadOnly = true;
+            this.dataGridRptOptsT.RowHeadersVisible = false;
+            this.dataGridRptOptsT.Size = new System.Drawing.Size(174, 156);
+            this.dataGridRptOptsT.TabIndex = 74;
+            this.dataGridRptOptsT.Visible = false;
             // 
             // cmbRptProvence
             // 
@@ -947,7 +968,7 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 190F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 206F));
             this.tableLayoutPanel1.Controls.Add(this.lblYt, 8, 0);
             this.tableLayoutPanel1.Controls.Add(this.txtXtTP1, 7, 2);
             this.tableLayoutPanel1.Controls.Add(this.txtXtTP2, 6, 2);
@@ -990,7 +1011,7 @@
             this.lblYt.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblYt.AutoSize = true;
             this.lblYt.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblYt.Location = new System.Drawing.Point(90, 3);
+            this.lblYt.Location = new System.Drawing.Point(98, 3);
             this.lblYt.Name = "lblYt";
             this.lblYt.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lblYt.Size = new System.Drawing.Size(21, 18);
@@ -1002,11 +1023,11 @@
             this.txtXtTP1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txtXtTP1.BackColor = System.Drawing.Color.Honeydew;
             this.txtXtTP1.Enabled = false;
-            this.txtXtTP1.Location = new System.Drawing.Point(200, 48);
+            this.txtXtTP1.Location = new System.Drawing.Point(216, 48);
             this.txtXtTP1.Margin = new System.Windows.Forms.Padding(0);
             this.txtXtTP1.Name = "txtXtTP1";
             this.txtXtTP1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtXtTP1.Size = new System.Drawing.Size(44, 20);
+            this.txtXtTP1.Size = new System.Drawing.Size(42, 20);
             this.txtXtTP1.TabIndex = 3;
             // 
             // txtXtTP2
@@ -1014,11 +1035,11 @@
             this.txtXtTP2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txtXtTP2.BackColor = System.Drawing.Color.Honeydew;
             this.txtXtTP2.Enabled = false;
-            this.txtXtTP2.Location = new System.Drawing.Point(246, 48);
+            this.txtXtTP2.Location = new System.Drawing.Point(260, 48);
             this.txtXtTP2.Margin = new System.Windows.Forms.Padding(0);
             this.txtXtTP2.Name = "txtXtTP2";
             this.txtXtTP2.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtXtTP2.Size = new System.Drawing.Size(44, 20);
+            this.txtXtTP2.Size = new System.Drawing.Size(42, 20);
             this.txtXtTP2.TabIndex = 3;
             // 
             // txtKTP1
@@ -1026,11 +1047,11 @@
             this.txtKTP1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txtKTP1.BackColor = System.Drawing.Color.Honeydew;
             this.txtKTP1.Enabled = false;
-            this.txtKTP1.Location = new System.Drawing.Point(200, 25);
+            this.txtKTP1.Location = new System.Drawing.Point(216, 25);
             this.txtKTP1.Margin = new System.Windows.Forms.Padding(0);
             this.txtKTP1.Name = "txtKTP1";
             this.txtKTP1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtKTP1.Size = new System.Drawing.Size(44, 20);
+            this.txtKTP1.Size = new System.Drawing.Size(42, 20);
             this.txtKTP1.TabIndex = 3;
             // 
             // txtXtTP3
@@ -1038,11 +1059,11 @@
             this.txtXtTP3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txtXtTP3.BackColor = System.Drawing.Color.Honeydew;
             this.txtXtTP3.Enabled = false;
-            this.txtXtTP3.Location = new System.Drawing.Point(292, 48);
+            this.txtXtTP3.Location = new System.Drawing.Point(304, 48);
             this.txtXtTP3.Margin = new System.Windows.Forms.Padding(0);
             this.txtXtTP3.Name = "txtXtTP3";
             this.txtXtTP3.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtXtTP3.Size = new System.Drawing.Size(44, 20);
+            this.txtXtTP3.Size = new System.Drawing.Size(42, 20);
             this.txtXtTP3.TabIndex = 3;
             // 
             // txtKTP2
@@ -1050,11 +1071,11 @@
             this.txtKTP2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txtKTP2.BackColor = System.Drawing.Color.Honeydew;
             this.txtKTP2.Enabled = false;
-            this.txtKTP2.Location = new System.Drawing.Point(246, 25);
+            this.txtKTP2.Location = new System.Drawing.Point(260, 25);
             this.txtKTP2.Margin = new System.Windows.Forms.Padding(0);
             this.txtKTP2.Name = "txtKTP2";
             this.txtKTP2.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtKTP2.Size = new System.Drawing.Size(44, 20);
+            this.txtKTP2.Size = new System.Drawing.Size(42, 20);
             this.txtKTP2.TabIndex = 3;
             // 
             // txtXtTP4
@@ -1062,11 +1083,11 @@
             this.txtXtTP4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txtXtTP4.BackColor = System.Drawing.Color.Honeydew;
             this.txtXtTP4.Enabled = false;
-            this.txtXtTP4.Location = new System.Drawing.Point(338, 48);
+            this.txtXtTP4.Location = new System.Drawing.Point(348, 48);
             this.txtXtTP4.Margin = new System.Windows.Forms.Padding(0);
             this.txtXtTP4.Name = "txtXtTP4";
             this.txtXtTP4.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtXtTP4.Size = new System.Drawing.Size(44, 20);
+            this.txtXtTP4.Size = new System.Drawing.Size(42, 20);
             this.txtXtTP4.TabIndex = 3;
             // 
             // txtYtTP1
@@ -1074,11 +1095,11 @@
             this.txtYtTP1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txtYtTP1.BackColor = System.Drawing.Color.Honeydew;
             this.txtYtTP1.Enabled = false;
-            this.txtYtTP1.Location = new System.Drawing.Point(200, 2);
+            this.txtYtTP1.Location = new System.Drawing.Point(216, 2);
             this.txtYtTP1.Margin = new System.Windows.Forms.Padding(0);
             this.txtYtTP1.Name = "txtYtTP1";
             this.txtYtTP1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtYtTP1.Size = new System.Drawing.Size(44, 20);
+            this.txtYtTP1.Size = new System.Drawing.Size(42, 20);
             this.txtYtTP1.TabIndex = 3;
             // 
             // txtXtTP5
@@ -1086,11 +1107,11 @@
             this.txtXtTP5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txtXtTP5.BackColor = System.Drawing.Color.Honeydew;
             this.txtXtTP5.Enabled = false;
-            this.txtXtTP5.Location = new System.Drawing.Point(384, 48);
+            this.txtXtTP5.Location = new System.Drawing.Point(392, 48);
             this.txtXtTP5.Margin = new System.Windows.Forms.Padding(0);
             this.txtXtTP5.Name = "txtXtTP5";
             this.txtXtTP5.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtXtTP5.Size = new System.Drawing.Size(44, 20);
+            this.txtXtTP5.Size = new System.Drawing.Size(42, 20);
             this.txtXtTP5.TabIndex = 3;
             // 
             // txtKTP3
@@ -1098,11 +1119,11 @@
             this.txtKTP3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txtKTP3.BackColor = System.Drawing.Color.Honeydew;
             this.txtKTP3.Enabled = false;
-            this.txtKTP3.Location = new System.Drawing.Point(292, 25);
+            this.txtKTP3.Location = new System.Drawing.Point(304, 25);
             this.txtKTP3.Margin = new System.Windows.Forms.Padding(0);
             this.txtKTP3.Name = "txtKTP3";
             this.txtKTP3.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtKTP3.Size = new System.Drawing.Size(44, 20);
+            this.txtKTP3.Size = new System.Drawing.Size(42, 20);
             this.txtKTP3.TabIndex = 3;
             // 
             // txtXtTP6
@@ -1110,11 +1131,11 @@
             this.txtXtTP6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txtXtTP6.BackColor = System.Drawing.Color.Honeydew;
             this.txtXtTP6.Enabled = false;
-            this.txtXtTP6.Location = new System.Drawing.Point(430, 48);
+            this.txtXtTP6.Location = new System.Drawing.Point(436, 48);
             this.txtXtTP6.Margin = new System.Windows.Forms.Padding(0);
             this.txtXtTP6.Name = "txtXtTP6";
             this.txtXtTP6.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtXtTP6.Size = new System.Drawing.Size(44, 20);
+            this.txtXtTP6.Size = new System.Drawing.Size(42, 20);
             this.txtXtTP6.TabIndex = 3;
             // 
             // lblK
@@ -1122,7 +1143,7 @@
             this.lblK.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblK.AutoSize = true;
             this.lblK.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblK.Location = new System.Drawing.Point(91, 26);
+            this.lblK.Location = new System.Drawing.Point(99, 26);
             this.lblK.Name = "lblK";
             this.lblK.Size = new System.Drawing.Size(18, 18);
             this.lblK.TabIndex = 2;
@@ -1133,11 +1154,11 @@
             this.txtXtTP7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txtXtTP7.BackColor = System.Drawing.Color.Honeydew;
             this.txtXtTP7.Enabled = false;
-            this.txtXtTP7.Location = new System.Drawing.Point(476, 48);
+            this.txtXtTP7.Location = new System.Drawing.Point(480, 48);
             this.txtXtTP7.Margin = new System.Windows.Forms.Padding(0);
             this.txtXtTP7.Name = "txtXtTP7";
             this.txtXtTP7.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtXtTP7.Size = new System.Drawing.Size(44, 20);
+            this.txtXtTP7.Size = new System.Drawing.Size(42, 20);
             this.txtXtTP7.TabIndex = 3;
             // 
             // txtKTP4
@@ -1145,11 +1166,11 @@
             this.txtKTP4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txtKTP4.BackColor = System.Drawing.Color.Honeydew;
             this.txtKTP4.Enabled = false;
-            this.txtKTP4.Location = new System.Drawing.Point(338, 25);
+            this.txtKTP4.Location = new System.Drawing.Point(348, 25);
             this.txtKTP4.Margin = new System.Windows.Forms.Padding(0);
             this.txtKTP4.Name = "txtKTP4";
             this.txtKTP4.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtKTP4.Size = new System.Drawing.Size(44, 20);
+            this.txtKTP4.Size = new System.Drawing.Size(42, 20);
             this.txtKTP4.TabIndex = 3;
             // 
             // txtXtTP8
@@ -1157,11 +1178,11 @@
             this.txtXtTP8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txtXtTP8.BackColor = System.Drawing.Color.Honeydew;
             this.txtXtTP8.Enabled = false;
-            this.txtXtTP8.Location = new System.Drawing.Point(522, 48);
+            this.txtXtTP8.Location = new System.Drawing.Point(524, 48);
             this.txtXtTP8.Margin = new System.Windows.Forms.Padding(0);
             this.txtXtTP8.Name = "txtXtTP8";
             this.txtXtTP8.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtXtTP8.Size = new System.Drawing.Size(44, 20);
+            this.txtXtTP8.Size = new System.Drawing.Size(42, 20);
             this.txtXtTP8.TabIndex = 3;
             // 
             // txtYtTP2
@@ -1169,11 +1190,11 @@
             this.txtYtTP2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txtYtTP2.BackColor = System.Drawing.Color.Honeydew;
             this.txtYtTP2.Enabled = false;
-            this.txtYtTP2.Location = new System.Drawing.Point(246, 2);
+            this.txtYtTP2.Location = new System.Drawing.Point(260, 2);
             this.txtYtTP2.Margin = new System.Windows.Forms.Padding(0);
             this.txtYtTP2.Name = "txtYtTP2";
             this.txtYtTP2.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtYtTP2.Size = new System.Drawing.Size(44, 20);
+            this.txtYtTP2.Size = new System.Drawing.Size(42, 20);
             this.txtYtTP2.TabIndex = 3;
             // 
             // txtKTP5
@@ -1181,11 +1202,11 @@
             this.txtKTP5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txtKTP5.BackColor = System.Drawing.Color.Honeydew;
             this.txtKTP5.Enabled = false;
-            this.txtKTP5.Location = new System.Drawing.Point(384, 25);
+            this.txtKTP5.Location = new System.Drawing.Point(392, 25);
             this.txtKTP5.Margin = new System.Windows.Forms.Padding(0);
             this.txtKTP5.Name = "txtKTP5";
             this.txtKTP5.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtKTP5.Size = new System.Drawing.Size(44, 20);
+            this.txtKTP5.Size = new System.Drawing.Size(42, 20);
             this.txtKTP5.TabIndex = 3;
             // 
             // lblXt
@@ -1193,7 +1214,7 @@
             this.lblXt.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblXt.AutoSize = true;
             this.lblXt.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblXt.Location = new System.Drawing.Point(89, 49);
+            this.lblXt.Location = new System.Drawing.Point(97, 49);
             this.lblXt.Name = "lblXt";
             this.lblXt.Size = new System.Drawing.Size(22, 18);
             this.lblXt.TabIndex = 2;
@@ -1204,11 +1225,11 @@
             this.txtKTP6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txtKTP6.BackColor = System.Drawing.Color.Honeydew;
             this.txtKTP6.Enabled = false;
-            this.txtKTP6.Location = new System.Drawing.Point(430, 25);
+            this.txtKTP6.Location = new System.Drawing.Point(436, 25);
             this.txtKTP6.Margin = new System.Windows.Forms.Padding(0);
             this.txtKTP6.Name = "txtKTP6";
             this.txtKTP6.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtKTP6.Size = new System.Drawing.Size(44, 20);
+            this.txtKTP6.Size = new System.Drawing.Size(42, 20);
             this.txtKTP6.TabIndex = 3;
             // 
             // txtYtTP3
@@ -1216,11 +1237,11 @@
             this.txtYtTP3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txtYtTP3.BackColor = System.Drawing.Color.Honeydew;
             this.txtYtTP3.Enabled = false;
-            this.txtYtTP3.Location = new System.Drawing.Point(292, 2);
+            this.txtYtTP3.Location = new System.Drawing.Point(304, 2);
             this.txtYtTP3.Margin = new System.Windows.Forms.Padding(0);
             this.txtYtTP3.Name = "txtYtTP3";
             this.txtYtTP3.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtYtTP3.Size = new System.Drawing.Size(44, 20);
+            this.txtYtTP3.Size = new System.Drawing.Size(42, 20);
             this.txtYtTP3.TabIndex = 3;
             // 
             // txtKTP7
@@ -1228,11 +1249,11 @@
             this.txtKTP7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txtKTP7.BackColor = System.Drawing.Color.Honeydew;
             this.txtKTP7.Enabled = false;
-            this.txtKTP7.Location = new System.Drawing.Point(476, 25);
+            this.txtKTP7.Location = new System.Drawing.Point(480, 25);
             this.txtKTP7.Margin = new System.Windows.Forms.Padding(0);
             this.txtKTP7.Name = "txtKTP7";
             this.txtKTP7.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtKTP7.Size = new System.Drawing.Size(44, 20);
+            this.txtKTP7.Size = new System.Drawing.Size(42, 20);
             this.txtKTP7.TabIndex = 3;
             // 
             // txtYtTP6
@@ -1240,11 +1261,11 @@
             this.txtYtTP6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txtYtTP6.BackColor = System.Drawing.Color.Honeydew;
             this.txtYtTP6.Enabled = false;
-            this.txtYtTP6.Location = new System.Drawing.Point(430, 2);
+            this.txtYtTP6.Location = new System.Drawing.Point(436, 2);
             this.txtYtTP6.Margin = new System.Windows.Forms.Padding(0);
             this.txtYtTP6.Name = "txtYtTP6";
             this.txtYtTP6.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtYtTP6.Size = new System.Drawing.Size(44, 20);
+            this.txtYtTP6.Size = new System.Drawing.Size(42, 20);
             this.txtYtTP6.TabIndex = 3;
             // 
             // txtKTP8
@@ -1252,11 +1273,11 @@
             this.txtKTP8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txtKTP8.BackColor = System.Drawing.Color.Honeydew;
             this.txtKTP8.Enabled = false;
-            this.txtKTP8.Location = new System.Drawing.Point(522, 25);
+            this.txtKTP8.Location = new System.Drawing.Point(524, 25);
             this.txtKTP8.Margin = new System.Windows.Forms.Padding(0);
             this.txtKTP8.Name = "txtKTP8";
             this.txtKTP8.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtKTP8.Size = new System.Drawing.Size(44, 20);
+            this.txtKTP8.Size = new System.Drawing.Size(42, 20);
             this.txtKTP8.TabIndex = 3;
             // 
             // txtYtTP4
@@ -1264,11 +1285,11 @@
             this.txtYtTP4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txtYtTP4.BackColor = System.Drawing.Color.Honeydew;
             this.txtYtTP4.Enabled = false;
-            this.txtYtTP4.Location = new System.Drawing.Point(338, 2);
+            this.txtYtTP4.Location = new System.Drawing.Point(348, 2);
             this.txtYtTP4.Margin = new System.Windows.Forms.Padding(0);
             this.txtYtTP4.Name = "txtYtTP4";
             this.txtYtTP4.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtYtTP4.Size = new System.Drawing.Size(44, 20);
+            this.txtYtTP4.Size = new System.Drawing.Size(42, 20);
             this.txtYtTP4.TabIndex = 3;
             // 
             // txtYtTP8
@@ -1276,11 +1297,11 @@
             this.txtYtTP8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txtYtTP8.BackColor = System.Drawing.Color.Honeydew;
             this.txtYtTP8.Enabled = false;
-            this.txtYtTP8.Location = new System.Drawing.Point(522, 2);
+            this.txtYtTP8.Location = new System.Drawing.Point(524, 2);
             this.txtYtTP8.Margin = new System.Windows.Forms.Padding(0);
             this.txtYtTP8.Name = "txtYtTP8";
             this.txtYtTP8.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtYtTP8.Size = new System.Drawing.Size(44, 20);
+            this.txtYtTP8.Size = new System.Drawing.Size(42, 20);
             this.txtYtTP8.TabIndex = 3;
             // 
             // txtYtTP5
@@ -1288,11 +1309,11 @@
             this.txtYtTP5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txtYtTP5.BackColor = System.Drawing.Color.Honeydew;
             this.txtYtTP5.Enabled = false;
-            this.txtYtTP5.Location = new System.Drawing.Point(384, 2);
+            this.txtYtTP5.Location = new System.Drawing.Point(392, 2);
             this.txtYtTP5.Margin = new System.Windows.Forms.Padding(0);
             this.txtYtTP5.Name = "txtYtTP5";
             this.txtYtTP5.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtYtTP5.Size = new System.Drawing.Size(44, 20);
+            this.txtYtTP5.Size = new System.Drawing.Size(42, 20);
             this.txtYtTP5.TabIndex = 3;
             // 
             // txtYtTP7
@@ -1300,11 +1321,11 @@
             this.txtYtTP7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txtYtTP7.BackColor = System.Drawing.Color.Honeydew;
             this.txtYtTP7.Enabled = false;
-            this.txtYtTP7.Location = new System.Drawing.Point(476, 2);
+            this.txtYtTP7.Location = new System.Drawing.Point(480, 2);
             this.txtYtTP7.Margin = new System.Windows.Forms.Padding(0);
             this.txtYtTP7.Name = "txtYtTP7";
             this.txtYtTP7.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtYtTP7.Size = new System.Drawing.Size(44, 20);
+            this.txtYtTP7.Size = new System.Drawing.Size(42, 20);
             this.txtYtTP7.TabIndex = 3;
             // 
             // tableLayoutPanel2
@@ -1423,7 +1444,7 @@
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 191F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 207F));
             this.tableLayoutPanel4.Controls.Add(this.txtTP1, 7, 0);
             this.tableLayoutPanel4.Controls.Add(this.txtTP2, 6, 0);
             this.tableLayoutPanel4.Controls.Add(this.txtTP3, 5, 0);
@@ -1445,11 +1466,11 @@
             // 
             this.txtTP1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txtTP1.BackColor = System.Drawing.Color.MediumTurquoise;
-            this.txtTP1.Location = new System.Drawing.Point(201, 2);
+            this.txtTP1.Location = new System.Drawing.Point(217, 2);
             this.txtTP1.Margin = new System.Windows.Forms.Padding(0);
             this.txtTP1.Name = "txtTP1";
             this.txtTP1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtTP1.Size = new System.Drawing.Size(44, 20);
+            this.txtTP1.Size = new System.Drawing.Size(42, 20);
             this.txtTP1.TabIndex = 16;
             this.txtTP1.Text = "2";
             this.txtTP1.TextChanged += new System.EventHandler(this.txtTP1_TextChanged);
@@ -1458,11 +1479,11 @@
             // 
             this.txtTP2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txtTP2.BackColor = System.Drawing.Color.MediumTurquoise;
-            this.txtTP2.Location = new System.Drawing.Point(247, 2);
+            this.txtTP2.Location = new System.Drawing.Point(261, 2);
             this.txtTP2.Margin = new System.Windows.Forms.Padding(0);
             this.txtTP2.Name = "txtTP2";
             this.txtTP2.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtTP2.Size = new System.Drawing.Size(44, 20);
+            this.txtTP2.Size = new System.Drawing.Size(42, 20);
             this.txtTP2.TabIndex = 17;
             this.txtTP2.Text = "3";
             this.txtTP2.TextChanged += new System.EventHandler(this.txtTP2_TextChanged);
@@ -1471,11 +1492,11 @@
             // 
             this.txtTP3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txtTP3.BackColor = System.Drawing.Color.MediumTurquoise;
-            this.txtTP3.Location = new System.Drawing.Point(293, 2);
+            this.txtTP3.Location = new System.Drawing.Point(305, 2);
             this.txtTP3.Margin = new System.Windows.Forms.Padding(0);
             this.txtTP3.Name = "txtTP3";
             this.txtTP3.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtTP3.Size = new System.Drawing.Size(44, 20);
+            this.txtTP3.Size = new System.Drawing.Size(42, 20);
             this.txtTP3.TabIndex = 18;
             this.txtTP3.Text = "5";
             this.txtTP3.TextChanged += new System.EventHandler(this.txtTP3_TextChanged);
@@ -1484,11 +1505,11 @@
             // 
             this.txtTP4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txtTP4.BackColor = System.Drawing.Color.MediumTurquoise;
-            this.txtTP4.Location = new System.Drawing.Point(339, 2);
+            this.txtTP4.Location = new System.Drawing.Point(349, 2);
             this.txtTP4.Margin = new System.Windows.Forms.Padding(0);
             this.txtTP4.Name = "txtTP4";
             this.txtTP4.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtTP4.Size = new System.Drawing.Size(44, 20);
+            this.txtTP4.Size = new System.Drawing.Size(42, 20);
             this.txtTP4.TabIndex = 19;
             this.txtTP4.Text = "20";
             this.txtTP4.TextChanged += new System.EventHandler(this.txtTP4_TextChanged);
@@ -1497,11 +1518,11 @@
             // 
             this.txtTP5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txtTP5.BackColor = System.Drawing.Color.MediumTurquoise;
-            this.txtTP5.Location = new System.Drawing.Point(385, 2);
+            this.txtTP5.Location = new System.Drawing.Point(393, 2);
             this.txtTP5.Margin = new System.Windows.Forms.Padding(0);
             this.txtTP5.Name = "txtTP5";
             this.txtTP5.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtTP5.Size = new System.Drawing.Size(44, 20);
+            this.txtTP5.Size = new System.Drawing.Size(42, 20);
             this.txtTP5.TabIndex = 20;
             this.txtTP5.Text = "25";
             this.txtTP5.TextChanged += new System.EventHandler(this.txtTP5_TextChanged);
@@ -1510,11 +1531,11 @@
             // 
             this.txtTP6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txtTP6.BackColor = System.Drawing.Color.MediumTurquoise;
-            this.txtTP6.Location = new System.Drawing.Point(431, 2);
+            this.txtTP6.Location = new System.Drawing.Point(437, 2);
             this.txtTP6.Margin = new System.Windows.Forms.Padding(0);
             this.txtTP6.Name = "txtTP6";
             this.txtTP6.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtTP6.Size = new System.Drawing.Size(44, 20);
+            this.txtTP6.Size = new System.Drawing.Size(42, 20);
             this.txtTP6.TabIndex = 21;
             this.txtTP6.Text = "50";
             this.txtTP6.TextChanged += new System.EventHandler(this.txtTP6_TextChanged);
@@ -1523,11 +1544,11 @@
             // 
             this.txtTP7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txtTP7.BackColor = System.Drawing.Color.MediumTurquoise;
-            this.txtTP7.Location = new System.Drawing.Point(477, 2);
+            this.txtTP7.Location = new System.Drawing.Point(481, 2);
             this.txtTP7.Margin = new System.Windows.Forms.Padding(0);
             this.txtTP7.Name = "txtTP7";
             this.txtTP7.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtTP7.Size = new System.Drawing.Size(44, 20);
+            this.txtTP7.Size = new System.Drawing.Size(42, 20);
             this.txtTP7.TabIndex = 22;
             this.txtTP7.Text = "100";
             this.txtTP7.TextChanged += new System.EventHandler(this.txtTP7_TextChanged);
@@ -1536,11 +1557,11 @@
             // 
             this.txtTP8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txtTP8.BackColor = System.Drawing.Color.MediumTurquoise;
-            this.txtTP8.Location = new System.Drawing.Point(523, 2);
+            this.txtTP8.Location = new System.Drawing.Point(525, 2);
             this.txtTP8.Margin = new System.Windows.Forms.Padding(0);
             this.txtTP8.Name = "txtTP8";
             this.txtTP8.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtTP8.Size = new System.Drawing.Size(44, 20);
+            this.txtTP8.Size = new System.Drawing.Size(42, 20);
             this.txtTP8.TabIndex = 23;
             this.txtTP8.Text = "500";
             this.txtTP8.TextChanged += new System.EventHandler(this.txtTP8_TextChanged);
@@ -1549,7 +1570,7 @@
             // 
             this.lblTyears.AutoSize = true;
             this.lblTyears.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTyears.Location = new System.Drawing.Point(148, 2);
+            this.lblTyears.Location = new System.Drawing.Point(164, 2);
             this.lblTyears.Margin = new System.Windows.Forms.Padding(0);
             this.lblTyears.Name = "lblTyears";
             this.lblTyears.Size = new System.Drawing.Size(51, 15);
@@ -1607,6 +1628,36 @@
             // 
             this.saveExcelFileDialog.RestoreDirectory = true;
             // 
+            // dataGridRptOptsB
+            // 
+            this.dataGridRptOptsB.AllowUserToAddRows = false;
+            this.dataGridRptOptsB.AllowUserToDeleteRows = false;
+            this.dataGridRptOptsB.AllowUserToResizeColumns = false;
+            this.dataGridRptOptsB.AllowUserToResizeRows = false;
+            this.dataGridRptOptsB.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridRptOptsB.Location = new System.Drawing.Point(8, 495);
+            this.dataGridRptOptsB.Name = "dataGridRptOptsB";
+            this.dataGridRptOptsB.RowHeadersVisible = false;
+            this.dataGridRptOptsB.Size = new System.Drawing.Size(175, 81);
+            this.dataGridRptOptsB.TabIndex = 75;
+            this.dataGridRptOptsB.Visible = false;
+            // 
+            // dataGridRptOptsTR
+            // 
+            this.dataGridRptOptsTR.AllowUserToAddRows = false;
+            this.dataGridRptOptsTR.AllowUserToDeleteRows = false;
+            this.dataGridRptOptsTR.AllowUserToResizeColumns = false;
+            this.dataGridRptOptsTR.AllowUserToResizeRows = false;
+            this.dataGridRptOptsTR.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridRptOptsTR.ColumnHeadersVisible = false;
+            this.dataGridRptOptsTR.Location = new System.Drawing.Point(313, 88);
+            this.dataGridRptOptsTR.Name = "dataGridRptOptsTR";
+            this.dataGridRptOptsTR.ReadOnly = true;
+            this.dataGridRptOptsTR.RowHeadersVisible = false;
+            this.dataGridRptOptsTR.Size = new System.Drawing.Size(576, 88);
+            this.dataGridRptOptsTR.TabIndex = 77;
+            this.dataGridRptOptsTR.Visible = false;
+            // 
             // RiversCalculator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1629,6 +1680,8 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
+            this.Controls.Add(this.dataGridRptOptsB);
+            this.Controls.Add(this.dataGridRptOptsTR);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "RiversCalculator";
             this.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -1644,6 +1697,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridRiver)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridRptOptsT)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.tableLayoutPanel1.ResumeLayout(false);
@@ -1654,6 +1708,8 @@
             this.tableLayoutPanel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridDecreation)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctChart)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridRptOptsB)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridRptOptsTR)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1786,6 +1842,9 @@
         private System.Windows.Forms.ToolStripMenuItem mmExportXlsx;
         private System.Windows.Forms.ToolStripMenuItem mmUploadXlsx;
         private System.Windows.Forms.SaveFileDialog saveExcelFileDialog;
+        private System.Windows.Forms.DataGridView dataGridRptOptsT;
+        private System.Windows.Forms.DataGridView dataGridRptOptsB;
+        private System.Windows.Forms.DataGridView dataGridRptOptsTR;
     }
 }
 

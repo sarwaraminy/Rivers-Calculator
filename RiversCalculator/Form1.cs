@@ -847,7 +847,91 @@ namespace RiversCalculator
             }
             catch { }
         }
+        //load data into valtable
+        private void loadToValTbl()
+        {
+            //Now insert the value of some screen options
+            //clear first the table
+            string vtQclr = "DELETE FROM VALTABLE";
+            ConString.excuteMyQuery(vtQclr);
+            string vTQ1 = "INSERT INTO VALTABLE VALUES('Country','" + cmbRptCountry.Text + "','1')";
+            ConString.excuteMyQuery(vTQ1);
+            string vTQ2 = "INSERT INTO VALTABLE VALUES('Provence','" + cmbRptProvence.Text + "','1')";
+            ConString.excuteMyQuery(vTQ2);
+            string vTQ3 = "INSERT INTO VALTABLE VALUES('District','" + cmbRptDistric.Text + "','1')";
+            ConString.excuteMyQuery(vTQ3);
+            string vTQ4 = "INSERT INTO VALTABLE VALUES('River','" + cmbRiverSel.Text + "','1')";
+            ConString.excuteMyQuery(vTQ4);
+            string vTQ5 = "INSERT INTO VALTABLE VALUES('Station','" + txtStNameDisp.Text + "','1')";
+            ConString.excuteMyQuery(vTQ5);
+            string vTQ6 = "INSERT INTO VALTABLE VALUES('Station ID','" + txtStNumDisp.Text + "','1')";
+            ConString.excuteMyQuery(vTQ6);
+            string vTQ7 = "INSERT INTO VALTABLE VALUES('Capacity','" + txtCADisp.Text + "','1')";
+            ConString.excuteMyQuery(vTQ7);
+            //add the bottom part to database
+            string vTbQ1 = "INSERT INTO VALTABLE VALUES('Average','" + txtMean.Text + "','2')";
+            ConString.excuteMyQuery(vTbQ1);
+            string vTbQ2 = "INSERT INTO VALTABLE VALUES('Dividence','" + txtStd.Text + "','2')";
+            ConString.excuteMyQuery(vTbQ2);
+            string vTbQ3 = "INSERT INTO VALTABLE VALUES('Count','" + txtN.Text + "','2')";
+            ConString.excuteMyQuery(vTbQ3);
+            loadBottomOptsToDG();
+            loadTopOptsToDG();
+            loadTopRightOptsToDG();
+        }
+        //add the above data into data grid dataGridRptOptsT
+        private void loadTopOptsToDG()
+        {
+            dataGridRptOptsT.DataSource = null;
+            try
+            {
+                string riverQ = "SELECT NAME_VAL, VAL FROM VALTABLE WHERE MARK='1'";
+                con = new OleDbConnection(ConString.dbConString);
+                con.Open();
+                oledbAdapter = new OleDbDataAdapter(riverQ, con);
+                dt = new DataTable();
+                oledbAdapter.Fill(dt);
+                dataGridRptOptsT.DataSource = dt;
+                con.Close();
+            }
+            catch (Exception ex) { MessageBox.Show(ex.Message); }
+        }
+        
+        //add the above data into data grid dataGridRptOptsB
+        private void loadBottomOptsToDG()
+        {
+            dataGridRptOptsB.DataSource = null;
+            try
+            {
+                string riverQ = "SELECT NAME_VAL, VAL FROM VALTABLE WHERE MARK='2'";
+                con = new OleDbConnection(ConString.dbConString);
+                con.Open();
+                oledbAdapter = new OleDbDataAdapter(riverQ, con);
+                dt = new DataTable();
+                oledbAdapter.Fill(dt);
+                dataGridRptOptsB.DataSource = dt;
+                con.Close();
+            }
+            catch (Exception ex) { MessageBox.Show(ex.Message); }
+        }
 
+        //add the above data into data grid dataGridRptOptsT
+        private void loadTopRightOptsToDG()
+        {
+            dataGridRptOptsTR.DataSource = null;
+            try
+            {
+                string riverQ = "SELECT * FROM TYEARS";
+                con = new OleDbConnection(ConString.dbConString);
+                con.Open();
+                oledbAdapter = new OleDbDataAdapter(riverQ, con);
+                dt = new DataTable();
+                oledbAdapter.Fill(dt);
+                dataGridRptOptsTR.DataSource = dt;
+                con.Close();
+            }
+            catch (Exception ex) { MessageBox.Show(ex.Message); }
+        }
         private void txtTP1_TextChanged(object sender, EventArgs e)
         {
             if (System.Text.RegularExpressions.Regex.IsMatch(txtTP1.Text, "[^0-9]"))
@@ -1366,6 +1450,7 @@ namespace RiversCalculator
         private void cmbRptDistric_SelectedIndexChanged(object sender, EventArgs e)
         {
             loadRiverCmb("R");
+            loadToValTbl();
         }
 
         private void btnImportToPDF_Click(object sender, EventArgs e)
@@ -1433,11 +1518,57 @@ namespace RiversCalculator
                                 }
                             }
 
+                            //top options datagrid
+                            PdfPTable pdfTable2 = new PdfPTable(dataGridRptOptsT.Columns.Count);
+                            pdfTable2.DefaultCell.Padding = 3;
+                            pdfTable2.WidthPercentage = 100;
+                            pdfTable2.HorizontalAlignment = Element.ALIGN_LEFT;
+                            //get rows
+                            foreach (DataGridViewRow row2 in dataGridRptOptsT.Rows)
+                            {
+                                foreach (DataGridViewCell cell2 in row2.Cells)
+                                {
+                                    pdfTable2.AddCell(cell2.Value.ToString());
+                                }
+                            }
+
+                            //bottom options datagrid
+                            PdfPTable pdfTable3 = new PdfPTable(dataGridRptOptsB.Columns.Count);
+                            pdfTable3.DefaultCell.Padding = 3;
+                            pdfTable3.WidthPercentage = 100;
+                            pdfTable3.HorizontalAlignment = Element.ALIGN_LEFT;
+                            //get rows
+                            foreach (DataGridViewRow row3 in dataGridRptOptsB.Rows)
+                            {
+                                foreach (DataGridViewCell cell3 in row3.Cells)
+                                {
+                                    pdfTable3.AddCell(cell3.Value.ToString());
+                                }
+                            }
+
+                            //Top right options datagrid
+                            PdfPTable pdfTable4 = new PdfPTable(dataGridRptOptsTR.Columns.Count);
+                            pdfTable4.DefaultCell.Padding = 3;
+                            pdfTable4.WidthPercentage = 100;
+                            pdfTable4.HorizontalAlignment = Element.ALIGN_RIGHT;
+                            //get rows
+                            foreach (DataGridViewRow row4 in dataGridRptOptsTR.Rows)
+                            {
+                                foreach (DataGridViewCell cell4 in row4.Cells)
+                                {
+                                    pdfTable4.AddCell(cell4.Value.ToString());
+                                }
+                            }
+
                             using (FileStream stream = new FileStream(sfd.FileName, FileMode.Create))
                             {
                                 Document pdfDoc = new Document(PageSize.A4, 10f, 20f, 20f, 10f);
                                 PdfWriter.GetInstance(pdfDoc, stream);
                                 pdfDoc.Open();
+                                //add our first table
+                                pdfDoc.Add(pdfTable4);
+                                //line break
+                                pdfDoc.Add(new iTextSharp.text.Paragraph("\n"));
                                 //graph report--------------------------------------------------------------------------
                                 //Call first Graph to be created
                                 PercentageChart("R");
@@ -1450,19 +1581,11 @@ namespace RiversCalculator
                                 //--------------------------------------------------------------------------------------
                                 pdfDoc.AddHeader("content-disposition", "attachment;filename=" + sfd.FileName);
                                 //add new boxed value
-                                pdfDoc.Add(new iTextSharp.text.Paragraph("Country Name: " + cmbRptCountry.Text));
-                                pdfDoc.Add(new iTextSharp.text.Paragraph("Provence Name: " + cmbRptProvence.Text));
-                                pdfDoc.Add(new iTextSharp.text.Paragraph("District Name: " + cmbRptDistric.Text));
-                                pdfDoc.Add(new iTextSharp.text.Paragraph("River Name: " + cmbRiverSel.Text));
-                                pdfDoc.Add(new iTextSharp.text.Paragraph("Station Name: " + txtStNameDisp.Text));
-                                pdfDoc.Add(new iTextSharp.text.Paragraph("Station ID: " + txtStNumDisp.Text));
-                                pdfDoc.Add(new iTextSharp.text.Paragraph("Capacity: " + txtCADisp.Text));
+                                pdfDoc.Add(pdfTable2);
                                 pdfDoc.Add(new iTextSharp.text.Paragraph("\n"));
                                 pdfDoc.Add(pdfTable);
                                 pdfDoc.Add(new iTextSharp.text.Paragraph("\n"));
-                                pdfDoc.Add(new iTextSharp.text.Paragraph("The Mean :   " + txtMean.Text));
-                                pdfDoc.Add(new iTextSharp.text.Paragraph("The Stdiv :   " + txtStd.Text));
-                                pdfDoc.Add(new iTextSharp.text.Paragraph("# records :   " + txtN.Text));
+                                pdfDoc.Add(pdfTable3);
                                 pdfDoc.NewPage();
                                 //call the graph2 to be created and then import it to the pdf
                                 PercentageChart("P");
