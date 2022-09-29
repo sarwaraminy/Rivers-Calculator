@@ -875,9 +875,6 @@ namespace RiversCalculator
             ConString.excuteMyQuery(vTbQ2);
             string vTbQ3 = "INSERT INTO VALTABLE VALUES('Count','" + txtN.Text + "','2')";
             ConString.excuteMyQuery(vTbQ3);
-            loadBottomOptsToDG();
-            loadTopOptsToDG();
-            loadTopRightOptsToDG();
         }
         //add the above data into data grid dataGridRptOptsT
         private void loadTopOptsToDG()
@@ -1476,6 +1473,10 @@ namespace RiversCalculator
                     }
                     if (!fileError)
                     {
+                        //load data first to datagirds
+                        loadBottomOptsToDG();
+                        loadTopOptsToDG();
+                        loadTopRightOptsToDG();
                         try
                         {
                             //yearly datagrid
@@ -1495,26 +1496,6 @@ namespace RiversCalculator
                                 foreach (DataGridViewCell cell in row.Cells)
                                 {
                                     pdfTable.AddCell(cell.Value.ToString());
-                                }
-                            }
-
-                            //decreation datagrid
-                            PdfPTable pdfTable1 = new PdfPTable(dataGridDecreation.Columns.Count);
-                            pdfTable1.DefaultCell.Padding = 3;
-                            pdfTable1.WidthPercentage = 100;
-                            pdfTable1.HorizontalAlignment = Element.ALIGN_LEFT;
-
-                            foreach (DataGridViewColumn column1 in dataGridDecreation.Columns)
-                            {
-                                PdfPCell cell1 = new PdfPCell(new Phrase(column1.HeaderText));
-                                pdfTable1.AddCell(cell1);
-                            }
-
-                            foreach (DataGridViewRow row1 in dataGridDecreation.Rows)
-                            {
-                                foreach (DataGridViewCell cell1 in row1.Cells)
-                                {
-                                    pdfTable1.AddCell(cell1.Value.ToString());
                                 }
                             }
 
@@ -1560,11 +1541,46 @@ namespace RiversCalculator
                                 }
                             }
 
+                            //add some static table
+                            PdfPTable pdfS1 = new PdfPTable(2);
+                            pdfS1.DefaultCell.Padding = 3;
+                            pdfS1.WidthPercentage = 22;
+                            pdfS1.HorizontalAlignment = Element.ALIGN_LEFT;
+                            pdfS1.AddCell(new Phrase(lblN.Text));
+                            pdfS1.AddCell(new Phrase(txtTimePerN.Text));
+                            pdfS1.AddCell(new Phrase(lblYn.Text));
+                            pdfS1.AddCell(new Phrase(txtYn.Text));
+                            pdfS1.AddCell(new Phrase(lblSn.Text));
+                            pdfS1.AddCell(new Phrase(txtSn.Text));
+
+                            //decreation datagrid
+                            PdfPTable pdfTable1 = new PdfPTable(dataGridDecreation.Columns.Count);
+                            pdfTable1.DefaultCell.Padding = 3;
+                            pdfTable1.WidthPercentage = 100;
+                            pdfTable1.HorizontalAlignment = Element.ALIGN_LEFT;
+
+                            foreach (DataGridViewColumn column1 in dataGridDecreation.Columns)
+                            {
+                                PdfPCell cell1 = new PdfPCell(new Phrase(column1.HeaderText));
+                                pdfTable1.AddCell(cell1);
+                            }
+
+                            foreach (DataGridViewRow row1 in dataGridDecreation.Rows)
+                            {
+                                foreach (DataGridViewCell cell1 in row1.Cells)
+                                {
+                                    pdfTable1.AddCell(cell1.Value.ToString());
+                                }
+                            }
+
+                            
                             using (FileStream stream = new FileStream(sfd.FileName, FileMode.Create))
                             {
                                 Document pdfDoc = new Document(PageSize.A4, 10f, 20f, 20f, 10f);
                                 PdfWriter.GetInstance(pdfDoc, stream);
                                 pdfDoc.Open();
+                                //
+                                pdfDoc.Add(pdfS1);
                                 //add our first table
                                 pdfDoc.Add(pdfTable4);
                                 //line break
@@ -1579,12 +1595,11 @@ namespace RiversCalculator
                                 img.Alignment = Right;
                                 pdfDoc.Add(img);
                                 //--------------------------------------------------------------------------------------
-                                pdfDoc.AddHeader("content-disposition", "attachment;filename=" + sfd.FileName);
                                 //add new boxed value
                                 pdfDoc.Add(pdfTable2);
-                                pdfDoc.Add(new iTextSharp.text.Paragraph("\n"));
+                                //pdfDoc.Add(new iTextSharp.text.Paragraph("\n"));
                                 pdfDoc.Add(pdfTable);
-                                pdfDoc.Add(new iTextSharp.text.Paragraph("\n"));
+                                //pdfDoc.Add(new iTextSharp.text.Paragraph("\n"));
                                 pdfDoc.Add(pdfTable3);
                                 pdfDoc.NewPage();
                                 //call the graph2 to be created and then import it to the pdf
