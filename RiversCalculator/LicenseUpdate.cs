@@ -22,7 +22,6 @@ namespace RiversCalculator
         OleDbDataAdapter oledbAdapter;
         DataTable dt;
         DataSet ds;
-        OleDbCommand cmd;
 
         public LicenseUpdate()
         {

@@ -1482,7 +1482,7 @@ namespace RiversCalculator
                             //yearly datagrid
                             PdfPTable pdfTable = new PdfPTable(dataGridRiver.Columns.Count);
                             pdfTable.DefaultCell.Padding = 3;
-                            pdfTable.WidthPercentage = 100;
+                            pdfTable.WidthPercentage = 80;
                             pdfTable.HorizontalAlignment = Element.ALIGN_LEFT;
 
                             foreach (DataGridViewColumn column in dataGridRiver.Columns)
@@ -1500,9 +1500,9 @@ namespace RiversCalculator
                             }
 
                             //top options datagrid
-                            PdfPTable pdfTable2 = new PdfPTable(dataGridRptOptsT.Columns.Count);
+                            PdfPTable pdfTable2 = new PdfPTable(2);
                             pdfTable2.DefaultCell.Padding = 3;
-                            pdfTable2.WidthPercentage = 100;
+                            pdfTable2.WidthPercentage = 80;
                             pdfTable2.HorizontalAlignment = Element.ALIGN_LEFT;
                             //get rows
                             foreach (DataGridViewRow row2 in dataGridRptOptsT.Rows)
@@ -1514,10 +1514,11 @@ namespace RiversCalculator
                             }
 
                             //bottom options datagrid
-                            PdfPTable pdfTable3 = new PdfPTable(dataGridRptOptsB.Columns.Count);
+                            PdfPTable pdfTable3 = new PdfPTable(2);
                             pdfTable3.DefaultCell.Padding = 3;
-                            pdfTable3.WidthPercentage = 100;
+                            pdfTable3.WidthPercentage = 80;
                             pdfTable3.HorizontalAlignment = Element.ALIGN_LEFT;
+                            
                             //get rows
                             foreach (DataGridViewRow row3 in dataGridRptOptsB.Rows)
                             {
@@ -1591,9 +1592,14 @@ namespace RiversCalculator
                                 MemoryStream memoryStream = new MemoryStream();
                                 pctChart.SaveImage(memoryStream, ChartImageFormat.Png);
                                 iTextSharp.text.Image img = iTextSharp.text.Image.GetInstance(memoryStream.GetBuffer());
-                                img.ScalePercent(90f);
-                                img.Alignment = Right;
+                                //img.ScalePercent(77f);
+                                img.ScaleToFit(370f, 370f);
+                                img.Alignment = iTextSharp.text.Image.TEXTWRAP | iTextSharp.text.Image.ALIGN_RIGHT;
+                                img.IndentationLeft = 1;
+                                img.SpacingAfter = 1;
+                                
                                 pdfDoc.Add(img);
+                                
                                 //--------------------------------------------------------------------------------------
                                 //add new boxed value
                                 pdfDoc.Add(pdfTable2);
