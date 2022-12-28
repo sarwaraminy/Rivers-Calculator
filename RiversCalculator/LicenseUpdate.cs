@@ -113,6 +113,7 @@ namespace RiversCalculator
         private void LicenseUpdate_Load(object sender, EventArgs e)
         {
             loginuser = File.ReadAllText(loginUserFile.loginUser).Trim();
+            lblBRight.Text = ConString.copyRight;
             //load users into combo box
             loadUserIDs();
 

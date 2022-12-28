@@ -34,6 +34,8 @@ namespace RiversCalculator
 
         private void RiversCalculator_Load(object sender, EventArgs e)
         {
+            //add the footting text
+            lblBRight.Text = ConString.copyRight;
             //create the database
             // get the user information from database
             if (!File.Exists(@ConString.folderPath + "\\" + ConString.dbName))
@@ -266,7 +268,8 @@ namespace RiversCalculator
             //change the date of from date
             var fromYearMinus10 = year - 10;
             string fromDateS = month0.ToString() + "/" + day0.ToString() + "/" + fromYearMinus10.ToString();
-            fromDate.Text = fromDateS;
+            //fromDate.Format = DateTimePickerFormat.Custom;
+            //fromDate.CustomFormat = fromDateS;
         }
         //check if the license is not valid
         private void licensCheck()
@@ -406,6 +409,8 @@ namespace RiversCalculator
                         txtStationID.Text = "";
                         //re-load the report
                         TheRiverRpt();
+                        //calculate the time periods 
+                        CalculateTheTyears();
                         //calculate the Dcreasion
                         TheRiverRptDecreation();
                         //load our time period chart
@@ -1686,6 +1691,20 @@ namespace RiversCalculator
             else
             {
                 MessageBox.Show("The excel uplad page is already opepn!");
+            }
+        }
+
+        private void addCountryToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AddNewCountry addCntry = null;
+            if ((addCntry = (AddNewCountry)IsFormAlreadyOpen(typeof(AddNewCountry))) == null)
+            {
+                addCntry = new AddNewCountry();
+                addCntry.Show();
+            }
+            else
+            {
+                MessageBox.Show("The add new Country page is already opepn!");
             }
         }
 

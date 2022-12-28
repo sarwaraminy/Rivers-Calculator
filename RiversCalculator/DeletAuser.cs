@@ -33,6 +33,7 @@ namespace RiversCalculator
         private void DeletAuser_Load(object sender, EventArgs e)
         {
             loginuser = File.ReadAllText(loginUserFile.loginUser).Trim();
+            lblBRight.Text = ConString.copyRight;
             // load the existence users during the loading window
             ExistenceUsers();
             // disable the boxes till the search button is clicked

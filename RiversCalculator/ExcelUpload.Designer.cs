@@ -38,10 +38,8 @@
             this.lblBRight = new System.Windows.Forms.LinkLabel();
             this.label2 = new System.Windows.Forms.Label();
             this.openXlsxFileDialog = new System.Windows.Forms.OpenFileDialog();
-            this.ptcrBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ptcrBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // btnBrowse
@@ -102,7 +100,6 @@
             this.panel4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
                         | System.Windows.Forms.AnchorStyles.Right)));
             this.panel4.BackColor = System.Drawing.Color.MistyRose;
-            this.panel4.Controls.Add(this.ptcrBox1);
             this.panel4.Controls.Add(this.lblMessage);
             this.panel4.Location = new System.Drawing.Point(0, 4);
             this.panel4.Name = "panel4";
@@ -122,14 +119,11 @@
             // 
             this.lblBRight.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
                         | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblBRight.AutoSize = true;
             this.lblBRight.LinkColor = System.Drawing.Color.Navy;
-            this.lblBRight.Location = new System.Drawing.Point(3, 153);
+            this.lblBRight.Location = new System.Drawing.Point(3, 147);
             this.lblBRight.Name = "lblBRight";
-            this.lblBRight.Size = new System.Drawing.Size(260, 13);
+            this.lblBRight.Size = new System.Drawing.Size(338, 23);
             this.lblBRight.TabIndex = 67;
-            this.lblBRight.TabStop = true;
-            this.lblBRight.Text = "Copyright: Mohammad Sarwar Amini ->+93706254517";
             this.lblBRight.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblBRight_LinkClicked);
             // 
             // label2
@@ -142,16 +136,6 @@
             this.label2.TabIndex = 66;
             this.label2.Text = "_________________________________________________________________________________" +
                 "________";
-            // 
-            // ptcrBox1
-            // 
-            this.ptcrBox1.Image = ((System.Drawing.Image)(resources.GetObject("ptcrBox1.Image")));
-            this.ptcrBox1.Location = new System.Drawing.Point(0, 0);
-            this.ptcrBox1.Name = "ptcrBox1";
-            this.ptcrBox1.Size = new System.Drawing.Size(100, 36);
-            this.ptcrBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.ptcrBox1.TabIndex = 1;
-            this.ptcrBox1.TabStop = false;
             // 
             // ExcelUpload
             // 
@@ -171,9 +155,7 @@
             this.Load += new System.EventHandler(this.ExcelUpload_Load);
             this.panel1.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.ptcrBox1)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -188,6 +170,5 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lblMessage;
         private System.Windows.Forms.OpenFileDialog openXlsxFileDialog;
-        private System.Windows.Forms.PictureBox ptcrBox1;
     }
 }

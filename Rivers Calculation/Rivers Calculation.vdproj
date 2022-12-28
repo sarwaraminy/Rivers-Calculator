@@ -3,7 +3,7 @@
 "VSVersion" = "3:800"
 "ProjectType" = "8:{978C614F-708E-4E1A-B201-565925725DBA}"
 "IsWebType" = "8:FALSE"
-"ProjectName" = "8:Rivers Calculation"
+"ProjectName" = "8:GEVD-SSP"
 "LanguageId" = "3:1033"
 "CodePage" = "3:1252"
 "UILanguageId" = "3:1033"
@@ -21,20 +21,26 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_058A26A8AB51432A8CE3DDC0477AF289"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_1FF52DCC0F2F4B58A52287DF757D3388"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_2705C1B6320C4FA5BDE388CCCD0C0808"
+        "MsmKey" = "8:_414BAA6A21F44389995D0E633BCB4731"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_2D4091BD2572458AA13C34639C365153"
-        "OwnerKey" = "8:_UNDEFINED"
+        "MsmKey" = "8:_4A381BE98D725EB206D5EE0DF7F24F80"
+        "OwnerKey" = "8:_01F3DE1A0AD943838F9F5D1B1CE93657"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -51,7 +57,7 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_58AA6415171C4BB2BC1C2740FC7FDC14"
+        "MsmKey" = "8:_4E7E28357BFA4E13A31FD3D82A4BD0C0"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -63,8 +69,26 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_BA2AC29AA2FC4C36950F3839CD043317"
+        "MsmKey" = "8:_666F0BC1569F404A9E2D34F3D6CC77EF"
         "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_B02E8E5FD38C47029708BE89EBA43511"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_D49511F77C9D6840C227EC4AB32A705E"
+        "OwnerKey" = "8:_01F3DE1A0AD943838F9F5D1B1CE93657"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_D49511F77C9D6840C227EC4AB32A705E"
+        "OwnerKey" = "8:_4A381BE98D725EB206D5EE0DF7F24F80"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -75,14 +99,20 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_EEA157E0379E4886B6AA20407431FC4D"
-        "OwnerKey" = "8:_UNDEFINED"
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_01F3DE1A0AD943838F9F5D1B1CE93657"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_01F3DE1A0AD943838F9F5D1B1CE93657"
+        "OwnerKey" = "8:_4A381BE98D725EB206D5EE0DF7F24F80"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_D49511F77C9D6840C227EC4AB32A705E"
         "MsmSig" = "8:_UNDEFINED"
         }
     }
@@ -190,6 +220,26 @@
         }
         "File"
         {
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_058A26A8AB51432A8CE3DDC0477AF289"
+            {
+            "SourcePath" = "8:..\\RiversCalculator\\bin\\Debug\\Rivers_Calculator.mdb"
+            "TargetName" = "8:Rivers_Calculator.mdb"
+            "Tag" = "8:"
+            "Folder" = "8:_C95137E81FEA46D3AC221E8CE2CB3121"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_1FF52DCC0F2F4B58A52287DF757D3388"
             {
             "SourcePath" = "8:..\\RiversCalculator\\Image\\river.jfif"
@@ -210,9 +260,9 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_2705C1B6320C4FA5BDE388CCCD0C0808"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_414BAA6A21F44389995D0E633BCB4731"
             {
-            "SourcePath" = "8:..\\..\\Expenses Calculator Dari V\\Expenses Calculator\\Debug\\WindowsInstaller3_1\\WindowsInstaller-KB893803-v2-x86.exe"
+            "SourcePath" = "8:..\\RiversCalculator\\bin\\Debug\\WindowsInstaller3_1\\WindowsInstaller-KB893803-v2-x86.exe"
             "TargetName" = "8:WindowsInstaller-KB893803-v2-x86.exe"
             "Tag" = "8:"
             "Folder" = "8:_C95137E81FEA46D3AC221E8CE2CB3121"
@@ -230,10 +280,21 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_2D4091BD2572458AA13C34639C365153"
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_4A381BE98D725EB206D5EE0DF7F24F80"
             {
-            "SourcePath" = "8:..\\..\\..\\..\\..\\Downloads\\AccessDatabaseEngine.exe"
-            "TargetName" = "8:AccessDatabaseEngine.exe"
+            "AssemblyRegister" = "3:1"
+            "AssemblyIsInGAC" = "11:FALSE"
+            "AssemblyAsmDisplayName" = "8:itextsharp, Version=5.5.13.3, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL"
+                "ScatterAssemblies"
+                {
+                    "_4A381BE98D725EB206D5EE0DF7F24F80"
+                    {
+                    "Name" = "8:itextsharp.dll"
+                    "Attributes" = "3:512"
+                    }
+                }
+            "SourcePath" = "8:itextsharp.dll"
+            "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_C95137E81FEA46D3AC221E8CE2CB3121"
             "Condition" = "8:"
@@ -247,7 +308,7 @@
             "PackageAs" = "3:1"
             "Register" = "3:1"
             "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
+            "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_4C28CC17705B4F62BE444E47E5A2C418"
@@ -290,10 +351,10 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_58AA6415171C4BB2BC1C2740FC7FDC14"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_4E7E28357BFA4E13A31FD3D82A4BD0C0"
             {
-            "SourcePath" = "8:..\\RiversCalculator\\bin\\Debug\\Rivers_Calculator.mdb"
-            "TargetName" = "8:Rivers_Calculator.mdb"
+            "SourcePath" = "8:..\\RiversCalculator\\bin\\Debug\\Help.pdf"
+            "TargetName" = "8:Help.pdf"
             "Tag" = "8:"
             "Folder" = "8:_C95137E81FEA46D3AC221E8CE2CB3121"
             "Condition" = "8:"
@@ -330,9 +391,29 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_BA2AC29AA2FC4C36950F3839CD043317"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_666F0BC1569F404A9E2D34F3D6CC77EF"
             {
-            "SourcePath" = "8:..\\..\\Expenses Calculator Dari V\\Expenses Calculator\\Debug\\DotNetFX35\\dotNetFx35setup.exe"
+            "SourcePath" = "8:..\\RiversCalculator\\bin\\Debug\\AccessDatabaseEngine.exe"
+            "TargetName" = "8:AccessDatabaseEngine.exe"
+            "Tag" = "8:"
+            "Folder" = "8:_C95137E81FEA46D3AC221E8CE2CB3121"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_B02E8E5FD38C47029708BE89EBA43511"
+            {
+            "SourcePath" = "8:..\\RiversCalculator\\bin\\Debug\\DotNetFX35\\dotNetFx35setup.exe"
             "TargetName" = "8:dotNetFx35setup.exe"
             "Tag" = "8:"
             "Folder" = "8:_C95137E81FEA46D3AC221E8CE2CB3121"
@@ -350,10 +431,21 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_ECBD3739CEC347529DE57E7642672368"
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_D49511F77C9D6840C227EC4AB32A705E"
             {
-            "SourcePath" = "8:..\\RiversCalculator\\Icon\\calculator.ico"
-            "TargetName" = "8:calculator.ico"
+            "AssemblyRegister" = "3:1"
+            "AssemblyIsInGAC" = "11:FALSE"
+            "AssemblyAsmDisplayName" = "8:BouncyCastle.Crypto, Version=1.8.9.0, Culture=neutral, PublicKeyToken=0e99375e54769942"
+                "ScatterAssemblies"
+                {
+                    "_D49511F77C9D6840C227EC4AB32A705E"
+                    {
+                    "Name" = "8:BouncyCastle.Crypto.dll"
+                    "Attributes" = "3:512"
+                    }
+                }
+            "SourcePath" = "8:BouncyCastle.Crypto.dll"
+            "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_C95137E81FEA46D3AC221E8CE2CB3121"
             "Condition" = "8:"
@@ -367,13 +459,13 @@
             "PackageAs" = "3:1"
             "Register" = "3:1"
             "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
+            "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_EEA157E0379E4886B6AA20407431FC4D"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_ECBD3739CEC347529DE57E7642672368"
             {
-            "SourcePath" = "8:..\\RiversCalculator\\bin\\Debug\\Help.pdf"
-            "TargetName" = "8:Help.pdf"
+            "SourcePath" = "8:..\\RiversCalculator\\Icon\\calculator.ico"
+            "TargetName" = "8:calculator.ico"
             "Tag" = "8:"
             "Folder" = "8:_C95137E81FEA46D3AC221E8CE2CB3121"
             "Condition" = "8:"
@@ -407,7 +499,7 @@
                 {
                     "{9EF0B969-E518-4E46-987F-47570745A589}:_13EEFD22EDB74AA4A2A17E8E98FB229B"
                     {
-                    "Name" = "8:Rivers Calculator"
+                    "Name" = "8:GEVD-SSP"
                     "AlwaysCreate" = "11:FALSE"
                     "Condition" = "8:"
                     "Transitive" = "11:FALSE"
@@ -456,7 +548,7 @@
         "Product"
         {
         "Name" = "8:Microsoft Visual Studio"
-        "ProductName" = "8:Rivers Calculation"
+        "ProductName" = "8:GEVD-SSP"
         "ProductCode" = "8:{EE817FAF-2337-4486-AE4A-3CF5F7C68E20}"
         "PackageCode" = "8:{B86DA35A-A807-4B56-844E-86BFF0C86F1D}"
         "UpgradeCode" = "8:{8EB0153A-24D6-4EB2-AF00-7DE43CE4B7D9}"
@@ -469,9 +561,9 @@
         "Manufacturer" = "8:Sarwar Amini"
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:"
-        "Title" = "8:Rivers Calculation"
+        "Title" = "8:Gumbel Extreme Value Distribution Statistical Software Package"
         "Subject" = "8:"
-        "ARPCONTACT" = "8:Rivers Calculator"
+        "ARPCONTACT" = "8:GEVD-SSP"
         "Keywords" = "8:"
         "ARPCOMMENTS" = "8:"
         "ARPURLINFOABOUT" = "8:"
@@ -580,7 +672,7 @@
         {
             "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_2902CBD29A984C2393DE56F3C0280570"
             {
-            "Name" = "8:Rivers Calculator"
+            "Name" = "8:GEVD-SSP"
             "Arguments" = "8:"
             "Description" = "8:"
             "ShowCmd" = "3:1"
@@ -594,7 +686,7 @@
             }
             "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_AFBF0A16E082412B8FC0CAB52F4C9D86"
             {
-            "Name" = "8:Rivers Calculator"
+            "Name" = "8:GEVD-SSP"
             "Arguments" = "8:"
             "Description" = "8:"
             "ShowCmd" = "3:1"

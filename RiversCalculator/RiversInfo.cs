@@ -32,6 +32,7 @@ namespace RiversCalculator
         private void RiversInfo_Load(object sender, EventArgs e)
         {
             loginuser = File.ReadAllText(loginUserFile.loginUser).Trim();
+            lblBRight.Text = ConString.copyRight;
             //load current date to the text box
             var dateAndTime = DateTime.Now;
             var year = dateAndTime.Year;

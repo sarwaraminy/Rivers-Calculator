@@ -51,15 +51,13 @@
             // 
             // lblBRight
             // 
-            this.lblBRight.AutoSize = true;
             this.lblBRight.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.lblBRight.LinkColor = System.Drawing.Color.Navy;
-            this.lblBRight.Location = new System.Drawing.Point(-4, 148);
+            this.lblBRight.Location = new System.Drawing.Point(4, 145);
             this.lblBRight.Name = "lblBRight";
-            this.lblBRight.Size = new System.Drawing.Size(260, 13);
+            this.lblBRight.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.lblBRight.Size = new System.Drawing.Size(376, 19);
             this.lblBRight.TabIndex = 77;
-            this.lblBRight.TabStop = true;
-            this.lblBRight.Text = "Copyright: Mohammad Sarwar Amini ->+93706254517";
             this.lblBRight.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.lblBRight.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblBRight_LinkClicked);
             // 

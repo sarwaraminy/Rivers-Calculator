@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RiversCalculator", "RiversCalculator\RiversCalculator.csproj", "{7B661E6D-4EBC-4D4F-B691-6278FE1B388C}"
 EndProject
-Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Rivers Calculation", "Rivers Calculation\Rivers Calculation.vdproj", "{CC6503DE-1F42-4D47-A740-1976DBD054AB}"
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "GEVD-SSP", "Rivers Calculation\Rivers Calculation.vdproj", "{CC6503DE-1F42-4D47-A740-1976DBD054AB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

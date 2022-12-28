@@ -176,7 +176,8 @@ namespace RiversCalculator
         {
             IntPtr hwnd = GetSystemMenu(this.Handle, false);
 
-            DeleteMenu(hwnd, SC_CLOSE, 0); 
+            DeleteMenu(hwnd, SC_CLOSE, 0);
+            lblBRight.Text = ConString.copyRight;
         }
 
 

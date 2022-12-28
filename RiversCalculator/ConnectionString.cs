@@ -8,6 +8,7 @@ namespace RiversCalculator
     {
         public string dbName;
         public string excelName;
+        public string copyRight = "Copyright: Mohammad Sarwar Amini ->+93706254517";
         string loginFileName = "loginuser.dat";
         string folderName = "Rivers Calculator";
         public string folderPath; 

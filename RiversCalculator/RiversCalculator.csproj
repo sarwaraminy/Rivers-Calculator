@@ -55,6 +55,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddNewCountry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddNewCountry.Designer.cs">
+      <DependentUpon>AddNewCountry.cs</DependentUpon>
+    </Compile>
     <Compile Include="ChangeUserPass.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -92,7 +98,6 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="ITextEvents.cs" />
     <Compile Include="LicenseUpdate.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -125,6 +130,9 @@
     <Compile Include="UserInfo.Designer.cs">
       <DependentUpon>UserInfo.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AddNewCountry.resx">
+      <DependentUpon>AddNewCountry.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ChangeUserPass.resx">
       <DependentUpon>ChangeUserPass.cs</DependentUpon>
     </EmbeddedResource>

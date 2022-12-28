@@ -143,7 +143,7 @@
             this.grpdeleteuser.Controls.Add(this.lblfirstname);
             this.grpdeleteuser.Controls.Add(this.txtfirstname);
             this.grpdeleteuser.Controls.Add(this.label1);
-            this.grpdeleteuser.Location = new System.Drawing.Point(9, 35);
+            this.grpdeleteuser.Location = new System.Drawing.Point(8, 35);
             this.grpdeleteuser.Name = "grpdeleteuser";
             this.grpdeleteuser.Size = new System.Drawing.Size(520, 205);
             this.grpdeleteuser.TabIndex = 63;
@@ -191,7 +191,7 @@
             // lblRePassword
             // 
             this.lblRePassword.AutoSize = true;
-            this.lblRePassword.Location = new System.Drawing.Point(283, 13);
+            this.lblRePassword.Location = new System.Drawing.Point(264, 13);
             this.lblRePassword.Name = "lblRePassword";
             this.lblRePassword.Size = new System.Drawing.Size(97, 13);
             this.lblRePassword.TabIndex = 27;
@@ -200,10 +200,10 @@
             // 
             // txtRePassword
             // 
-            this.txtRePassword.Location = new System.Drawing.Point(22, 30);
+            this.txtRePassword.Location = new System.Drawing.Point(267, 29);
             this.txtRePassword.Name = "txtRePassword";
             this.txtRePassword.PasswordChar = '*';
-            this.txtRePassword.Size = new System.Drawing.Size(108, 20);
+            this.txtRePassword.Size = new System.Drawing.Size(114, 20);
             this.txtRePassword.TabIndex = 18;
             // 
             // lblPassword
@@ -236,9 +236,9 @@
             // 
             // txtUserid
             // 
-            this.txtUserid.Location = new System.Drawing.Point(266, 30);
+            this.txtUserid.Location = new System.Drawing.Point(22, 29);
             this.txtUserid.Name = "txtUserid";
-            this.txtUserid.Size = new System.Drawing.Size(115, 20);
+            this.txtUserid.Size = new System.Drawing.Size(110, 20);
             this.txtUserid.TabIndex = 15;
             // 
             // lblLastname
@@ -284,14 +284,11 @@
             // 
             // lblBRight
             // 
-            this.lblBRight.AutoSize = true;
             this.lblBRight.LinkColor = System.Drawing.Color.Navy;
             this.lblBRight.Location = new System.Drawing.Point(7, 259);
             this.lblBRight.Name = "lblBRight";
-            this.lblBRight.Size = new System.Drawing.Size(260, 13);
+            this.lblBRight.Size = new System.Drawing.Size(337, 22);
             this.lblBRight.TabIndex = 65;
-            this.lblBRight.TabStop = true;
-            this.lblBRight.Text = "Copyright: Mohammad Sarwar Amini ->+93706254517";
             this.lblBRight.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblBRight_LinkClicked);
             // 
             // lblDeleteUserMessage
@@ -347,7 +344,6 @@
             this.grpdeleteuser.ResumeLayout(false);
             this.grpdeleteuser.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 

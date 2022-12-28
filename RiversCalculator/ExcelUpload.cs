@@ -33,6 +33,7 @@ namespace RiversCalculator
         private void ExcelUpload_Load(object sender, EventArgs e)
         {
             loginuser = File.ReadAllText(ConString.loginUser).Trim();
+            lblBRight.Text = ConString.copyRight;
         }
 
         private void lblBRight_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -73,7 +74,6 @@ namespace RiversCalculator
         {
             try
             {
-                ptcrBox1.Show();
                 //Clear box
                 lblMessage.Text = "";
                 //check the excel file is exists
@@ -113,7 +113,6 @@ namespace RiversCalculator
                     //------End-------------------------------------------------RIVERSINFO
                     
                     lblMessage.Text = "Data has been Imported successfully.";
-                    ptcrBox1.Hide();
                 }
                 else { lblMessage.Text = "Excel File is missing"; }
             }
@@ -368,7 +367,7 @@ namespace RiversCalculator
                 string CntryQ = "INSERT INTO RIVERSINFO (COUNTRY,PCODE,DCODE,RIVER_ID,CNAME,PNAME,DNAME,RNAME,USER_ID,REG_DATE) " +
                     " SELECT t1.COUNTRY, t1.PCODE, t1.DCODE, t1.RIVER_ID, t1.CNAME, t1.PNAME, t1.DNAME, t1.RNAME,t1.USER_ID,t1.REG_DATE FROM " +
                     " TMP_RIVERSINFO t1 WHERE NOT EXISTS (SELECT COUNTRY, PCODE, DCODE, RIVER_ID FROM RIVERSINFO t2 WHERE t2.COUNTRY=t1.COUNTRY " +
-                    " AND t2.PCODE=t1.PCODE AND t2.DCODE=t1.DCODE AND t2.RIVER_ID=t1.RIVER_ID )";
+                    " AND t2.PCODE=t1.PCODE AND t2.DCODE=t1.DCODE AND t2.RIVER_ID=t1.RIVER_ID AND t2.USER_ID=t1.USER_ID )";
                 //Now excute the query
                 sa_conCls.excuteMyQuery(CntryQ);
             }

@@ -137,14 +137,11 @@
             // 
             // lblBRight
             // 
-            this.lblBRight.AutoSize = true;
             this.lblBRight.LinkColor = System.Drawing.Color.Navy;
-            this.lblBRight.Location = new System.Drawing.Point(2, 123);
+            this.lblBRight.Location = new System.Drawing.Point(2, 120);
             this.lblBRight.Name = "lblBRight";
-            this.lblBRight.Size = new System.Drawing.Size(260, 13);
+            this.lblBRight.Size = new System.Drawing.Size(318, 16);
             this.lblBRight.TabIndex = 72;
-            this.lblBRight.TabStop = true;
-            this.lblBRight.Text = "Copyright: Mohammad Sarwar Amini ->+93706254517";
             // 
             // LicenseUpdate
             // 
@@ -164,7 +161,6 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 

@@ -141,10 +141,8 @@
             this.lblBRight.LinkColor = System.Drawing.Color.Navy;
             this.lblBRight.Location = new System.Drawing.Point(3, 288);
             this.lblBRight.Name = "lblBRight";
-            this.lblBRight.Size = new System.Drawing.Size(260, 13);
+            this.lblBRight.Size = new System.Drawing.Size(0, 13);
             this.lblBRight.TabIndex = 75;
-            this.lblBRight.TabStop = true;
-            this.lblBRight.Text = "Copyright: Mohammad Sarwar Amini ->+93706254517";
             this.lblBRight.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblBRight_LinkClicked);
             // 
             // label1

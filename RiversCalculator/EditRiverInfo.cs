@@ -34,6 +34,7 @@ namespace RiversCalculator
         {
             //get the login user id
             loginuser = File.ReadAllText(loginUserFile.loginUser).Trim();
+            lblBRight.Text = ConString.copyRight;
             //load the country name to combo box
             loadCountryTbl();
             //load Provence/district name for the selected country

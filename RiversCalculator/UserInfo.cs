@@ -116,6 +116,7 @@ namespace RiversCalculator
             else
                 month0 = month.ToString();
             txtRegisterDate.Text = month0.ToString() + "/" + day0.ToString() + "/" + year.ToString();
+            lblBRight.Text = ConString.copyRight;
         }
 
         private void btnClear_Click(object sender, EventArgs e)

@@ -82,3 +82,25 @@ C:\Users\fahmadian\Documents\Sarwar Project\RiversCalculator_Eng\RiversCalculato
 C:\Users\fahmadian\Documents\Sarwar Project\RiversCalculator_Eng\RiversCalculator\obj\x86\Debug\RiversCalculator.RiversInfo.resources
 C:\Users\fahmadian\Documents\Sarwar Project\RiversCalculator_Eng\RiversCalculator\obj\x86\Debug\RiversCalculator.UserInfo.resources
 C:\Users\fahmadian\Documents\Sarwar Project\RiversCalculator_Eng\RiversCalculator\obj\x86\Debug\RiversCalculator.csproj.GenerateResource.Cache
+C:\Users\fahmadian\Documents\Sarwar Project\RiversCalculator_Eng\RiversCalculator\obj\x86\Debug\RiversCalculator.AddNewCountry.resources
+C:\Users\SarwarAmini\Documents\Visual Studio 2010\Projects\RiversCalculator_Eng\RiversCalculator\obj\x86\Debug\RiversCalculator.exe
+C:\Users\SarwarAmini\Documents\Visual Studio 2010\Projects\RiversCalculator_Eng\RiversCalculator\obj\x86\Debug\RiversCalculator.pdb
+C:\Users\SarwarAmini\Documents\Visual Studio 2010\Projects\RiversCalculator_Eng\RiversCalculator\bin\Debug\RiversCalculator.exe
+C:\Users\SarwarAmini\Documents\Visual Studio 2010\Projects\RiversCalculator_Eng\RiversCalculator\bin\Debug\RiversCalculator.pdb
+C:\Users\SarwarAmini\Documents\Visual Studio 2010\Projects\RiversCalculator_Eng\RiversCalculator\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\SarwarAmini\Documents\Visual Studio 2010\Projects\RiversCalculator_Eng\RiversCalculator\bin\Debug\itextsharp.dll
+C:\Users\SarwarAmini\Documents\Visual Studio 2010\Projects\RiversCalculator_Eng\RiversCalculator\bin\Debug\itextsharp.xml
+C:\Users\SarwarAmini\Documents\Visual Studio 2010\Projects\RiversCalculator_Eng\RiversCalculator\obj\x86\Debug\RiversCalculator.AddNewCountry.resources
+C:\Users\SarwarAmini\Documents\Visual Studio 2010\Projects\RiversCalculator_Eng\RiversCalculator\obj\x86\Debug\RiversCalculator.ChangeUserPass.resources
+C:\Users\SarwarAmini\Documents\Visual Studio 2010\Projects\RiversCalculator_Eng\RiversCalculator\obj\x86\Debug\RiversCalculator.DeletAuser.resources
+C:\Users\SarwarAmini\Documents\Visual Studio 2010\Projects\RiversCalculator_Eng\RiversCalculator\obj\x86\Debug\RiversCalculator.EditRiverInfo.resources
+C:\Users\SarwarAmini\Documents\Visual Studio 2010\Projects\RiversCalculator_Eng\RiversCalculator\obj\x86\Debug\RiversCalculator.EditRiverInforRpt.resources
+C:\Users\SarwarAmini\Documents\Visual Studio 2010\Projects\RiversCalculator_Eng\RiversCalculator\obj\x86\Debug\RiversCalculator.ExcelUpload.resources
+C:\Users\SarwarAmini\Documents\Visual Studio 2010\Projects\RiversCalculator_Eng\RiversCalculator\obj\x86\Debug\RiversCalculator.RiversCalculator.resources
+C:\Users\SarwarAmini\Documents\Visual Studio 2010\Projects\RiversCalculator_Eng\RiversCalculator\obj\x86\Debug\RiversCalculator.LicenseUpdate.resources
+C:\Users\SarwarAmini\Documents\Visual Studio 2010\Projects\RiversCalculator_Eng\RiversCalculator\obj\x86\Debug\RiversCalculator.LicenseUpdateDirection.resources
+C:\Users\SarwarAmini\Documents\Visual Studio 2010\Projects\RiversCalculator_Eng\RiversCalculator\obj\x86\Debug\RiversCalculator.Login.resources
+C:\Users\SarwarAmini\Documents\Visual Studio 2010\Projects\RiversCalculator_Eng\RiversCalculator\obj\x86\Debug\RiversCalculator.Properties.Resources.resources
+C:\Users\SarwarAmini\Documents\Visual Studio 2010\Projects\RiversCalculator_Eng\RiversCalculator\obj\x86\Debug\RiversCalculator.RiversInfo.resources
+C:\Users\SarwarAmini\Documents\Visual Studio 2010\Projects\RiversCalculator_Eng\RiversCalculator\obj\x86\Debug\RiversCalculator.UserInfo.resources
+C:\Users\SarwarAmini\Documents\Visual Studio 2010\Projects\RiversCalculator_Eng\RiversCalculator\obj\x86\Debug\RiversCalculator.csproj.GenerateResource.Cache
