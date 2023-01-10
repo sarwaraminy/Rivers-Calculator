@@ -8,9 +8,9 @@ namespace RiversCalculator
     {
         public string dbName;
         public string excelName;
-        public string copyRight = "Copyright: Mohammad Sarwar Amini ->+93706254517";
+        public string copyRight = "Copyright ©:";
         string loginFileName = "loginuser.dat";
-        string folderName = "Rivers Calculator";
+        string folderName = "GEVD SSP";
         public string folderPath; 
         public string dbConString;
         public string xlsxConString;

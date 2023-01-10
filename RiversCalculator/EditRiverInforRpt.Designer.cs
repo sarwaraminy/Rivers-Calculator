@@ -113,10 +113,10 @@
             this.label10.AutoSize = true;
             this.label10.Location = new System.Drawing.Point(188, 57);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(48, 13);
+            this.label10.Size = new System.Drawing.Size(58, 13);
             this.label10.TabIndex = 37;
             this.label10.Tag = "";
-            this.label10.Text = "Capacity";
+            this.label10.Text = "Catchment";
             // 
             // txtEditStationIDRpt
             // 

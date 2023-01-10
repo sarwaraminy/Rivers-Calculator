@@ -43,6 +43,7 @@ namespace RiversCalculator
 
         private void btnBrowse_Click(object sender, EventArgs e)
         {
+            MessageForm msgf = new MessageForm();
             try
             {
                 openXlsxFileDialog.InitialDirectory = @Application.StartupPath.Substring(0, 3);
@@ -54,6 +55,7 @@ namespace RiversCalculator
                 openXlsxFileDialog.ShowReadOnly = true;
                 if (openXlsxFileDialog.ShowDialog() == DialogResult.OK)
                 {
+                    msgf.Show();
                     // then copy the database into this folder
                     string SourceDir = @ConString.folderPath;
                     string fname = ConString.excelName;
@@ -61,6 +63,8 @@ namespace RiversCalculator
                     System.IO.File.Copy(Path.Combine(folderPath, openXlsxFileDialog.FileName), Path.Combine(SourceDir, fname), true);
                     lblMessage.Text = "Excel File successfully uploaded!";
                     lblMessage.ForeColor = Color.Red;
+                    
+                    msgf.Close();
                 }
             }
             catch (IOException ioex)
@@ -74,6 +78,8 @@ namespace RiversCalculator
         {
             try
             {
+                MessageForm msgf = new MessageForm();
+                msgf.Show();
                 //Clear box
                 lblMessage.Text = "";
                 //check the excel file is exists
@@ -113,6 +119,7 @@ namespace RiversCalculator
                     //------End-------------------------------------------------RIVERSINFO
                     
                     lblMessage.Text = "Data has been Imported successfully.";
+                    msgf.Close();
                 }
                 else { lblMessage.Text = "Excel File is missing"; }
             }

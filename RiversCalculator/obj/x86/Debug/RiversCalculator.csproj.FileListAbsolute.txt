@@ -104,3 +104,4 @@ C:\Users\SarwarAmini\Documents\Visual Studio 2010\Projects\RiversCalculator_Eng\
 C:\Users\SarwarAmini\Documents\Visual Studio 2010\Projects\RiversCalculator_Eng\RiversCalculator\obj\x86\Debug\RiversCalculator.RiversInfo.resources
 C:\Users\SarwarAmini\Documents\Visual Studio 2010\Projects\RiversCalculator_Eng\RiversCalculator\obj\x86\Debug\RiversCalculator.UserInfo.resources
 C:\Users\SarwarAmini\Documents\Visual Studio 2010\Projects\RiversCalculator_Eng\RiversCalculator\obj\x86\Debug\RiversCalculator.csproj.GenerateResource.Cache
+C:\Users\SarwarAmini\Documents\Visual Studio 2010\Projects\RiversCalculator_Eng\RiversCalculator\obj\x86\Debug\RiversCalculator.MessageForm.resources
